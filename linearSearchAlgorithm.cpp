@@ -38,7 +38,7 @@ int main(){
                 cout <<"Enter 'Y' or 'y' to try again\n";
                 cin >> choice;
 
-        }while(choice == 'Y' || 'y');   //user can keep trying to guess the number 
+        }while(choice == 'Y' || choice == 'y');   //user can keep trying to guess the number 
         
     return 0;
 }
