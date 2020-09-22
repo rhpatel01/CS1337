@@ -1,3 +1,12 @@
+/*
+Ruchit Patel
+
+Simple linear search algorithm where each result is tested against the user input starting 
+from position 0 until a value if found or until all the elements are completed. Great algorithm
+to locate a find value in a given array.
+
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -9,16 +18,34 @@ int main(){
     const int SIZE = 5;
     int array[SIZE] = {10,5,7,3,1};
     int searchValue;
-
-        cout << "Enter a value to be searched\n";
-        cin >> searchValue;
-
-    linearSearch(array, SIZE, searchValue);
-    
+    int result;
+    char choice; 
 
 
+       do{
+                cout << "Enter a value to be searched\n";
+                cin >> searchValue;
+
+                //function call
+                result = linearSearch(array, SIZE, searchValue);
+        
+                    if(result == -1){
+                        cout << "Value entered was not found.\n";
+                    }else{
+                        cout << "Value was found!\n\n";
+                    }
+
+                cout <<"Enter 'Y' or 'y' to try again\n";
+                cin >> choice;
+
+        }while(choice == 'Y' || 'y');   //user can keep trying to guess the number 
+        
     return 0;
 }
+
+
+
+
 
 int linearSearch(int array[], int SIZE, int searchValue){
 
